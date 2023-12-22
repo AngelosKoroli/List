@@ -5,12 +5,12 @@ import javafx.scene.control.TableView;
 
 public class Controller {
     public TableView AnimeTierlist;
-   public TableColumn S;
-    public TableColumn A;
-    public TableColumn B;
-    public TableColumn C;
-    public TableColumn D;
-    public TableColumn F;
+   public TableColumn Rank;
+    public TableColumn Anime;
+    public TableColumn MainCharacter;
+    public TableColumn MainAntagonist ;
+    public TableColumn YearReleased;
+
 
     public void initialize() {}
 
