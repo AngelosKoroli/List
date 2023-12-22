@@ -11,7 +11,7 @@ public class Controller<AnimeTierlist> {
     public TableColumn MainAntagonist ;
     public TableColumn YearReleased;
 
-
+///
     public void initialize() {
         AnimeTierlist Anime1 = new AnimeTierlist("S", "Baki","Baki", "Yujiro",1/8/2023);
     }
