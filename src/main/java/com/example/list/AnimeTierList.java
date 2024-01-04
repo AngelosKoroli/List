@@ -9,12 +9,12 @@ public class AnimeTierList implements Serializable {
     private String MainAntagonist;
     private int YearReleased;
 
-    public AnimeTierList(int rank, String anime, String MC, String MA, int YR) {
-        this.Rank = rank;
-        this.Anime = anime;
-        this.MainCharacter = MC;
-        this.MainAntagonist = MA;
-        this.YearReleased = YR;
+    public AnimeTierList(int Rank, String Anime, String MainCharacter, String MainAntagonist, int YearReleased) {
+        this.Rank = Rank;
+        this.Anime = Anime;
+        this.MainCharacter = MainCharacter;
+        this.MainAntagonist = MainAntagonist;
+        this.YearReleased = YearReleased;
 
     }
 
