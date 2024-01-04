@@ -1,3 +1,5 @@
+package com.example.list;
+
 public class AnimeTierList {
     private int Rank;
     private String Anime;
