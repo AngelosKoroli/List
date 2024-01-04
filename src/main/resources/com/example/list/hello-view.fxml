@@ -15,12 +15,11 @@
       </Text>
       <TableView fx:id="AnimeTierlist" layoutY="43.0" prefHeight="359.0" prefWidth="600.0">
         <columns>
-          <TableColumn prefWidth="101.0" text="S" />
-          <TableColumn prefWidth="90.0" text="A" />
-            <TableColumn prefWidth="92.0" text="B" />
-            <TableColumn prefWidth="96.0" text="C" />
-            <TableColumn prefWidth="107.0" text="D" />
-            <TableColumn prefWidth="113.0" text="F" />
+          <TableColumn fx:id="Rank" prefWidth="66.0" text="Rank" />
+          <TableColumn fx:id="Anime" prefWidth="136.0" text="Anime" />
+            <TableColumn fx:id="MainCharacter" prefWidth="149.0" text="MC" />
+            <TableColumn fx:id="MainAntagonist" prefWidth="158.0" text="MA" />
+            <TableColumn fx:id="YearReleased" prefWidth="89.0" text="Year" />
         </columns>
       </TableView>
    </children>

@@ -1,65 +1,58 @@
 public class AnimeTierList {
-    private String S;
-    private String A;
-    private String B;
-    private String C;
-    private String D;
-    private String F;
+    private int Rank;
+    private String Anime;
+    private String MainCharacter;
+    private String MainAntagonist;
+    private int YearReleased;
 
-    public AnimeTierList(String s, String a, String b, String c, String d, String f) {
-        S = s;
-        A = a;
-        B = b;
-        C = c;
-        D = d;
-        F = f;
+    public AnimeTierList(int rank, String anime, String MC, String MA, int YR) {
+        Rank = rank;
+        Anime = anime;
+        MainCharacter = MC;
+        MainAntagonist = MA;
+        YearReleased = YR;
+
     }
 
-    public String getS() {
-        return S;
+    public int getRank() {
+        return Rank;
     }
 
-    public void setS(String s) {
-        S = s;
+    public void setS(int rank) {
+        Rank = rank;
     }
 
     public String getA() {
-        return A;
+        return Anime;
     }
 
-    public void setA(String a) {
-        A = a;
+    public void setA(String anime) {
+        Anime = anime;
     }
 
     public String getB() {
-        return B;
+        return  MainCharacter;
     }
 
-    public void setB(String b) {
-        B = b;
+    public void setB(String MC) {
+        MainCharacter = MC;
     }
 
     public String getC() {
-        return C;
+        return MainAntagonist;
     }
 
-    public void setC(String c) {
-        C = c;
+    public void setC(String MA) {
+        MainAntagonist = MA;
     }
 
-    public String getD() {
-        return D;
+    public int getD() {
+        return YearReleased;
     }
 
-    public void setD(String d) {
-        D = d;
+    public void setD(int YR) {
+        YearReleased = YR;
     }
 
-    public String getF() {
-        return F;
-    }
 
-    public void setF(String f) {
-        F = f;
-    }
 }
