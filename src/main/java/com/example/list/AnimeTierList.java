@@ -1,6 +1,8 @@
 package com.example.list;
 
-public class AnimeTierList {
+import java.io.Serializable;
+
+public class AnimeTierList implements Serializable {
     private int Rank;
     private String Anime;
     private String MainCharacter;
@@ -8,11 +10,11 @@ public class AnimeTierList {
     private int YearReleased;
 
     public AnimeTierList(int rank, String anime, String MC, String MA, int YR) {
-        Rank = rank;
-        Anime = anime;
-        MainCharacter = MC;
-        MainAntagonist = MA;
-        YearReleased = YR;
+        this.Rank = rank;
+        this.Anime = anime;
+        this.MainCharacter = MC;
+        this.MainAntagonist = MA;
+        this.YearReleased = YR;
 
     }
 
@@ -56,5 +58,7 @@ public class AnimeTierList {
         YearReleased = YR;
     }
 
-
+    public String toString() {
+        return Rank + Anime + MainCharacter + MainCharacter + YearReleased;
+    }
 }
