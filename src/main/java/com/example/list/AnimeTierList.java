@@ -22,40 +22,40 @@ public class AnimeTierList implements Serializable {
         return Rank;
     }
 
-    public void setS(int rank) {
+    public void setRank(int rank) {
         Rank = rank;
     }
 
-    public String getA() {
+    public String getAnime() {
         return Anime;
     }
 
-    public void setA(String anime) {
+    public void setAnime(String anime) {
         Anime = anime;
     }
 
-    public String getB() {
-        return  MainCharacter;
+    public String getMainCharacter() {
+        return MainCharacter;
     }
 
-    public void setB(String MC) {
-        MainCharacter = MC;
+    public void setMainCharacter(String mainCharacter) {
+        MainCharacter = mainCharacter;
     }
 
-    public String getC() {
+    public String getMainAntagonist() {
         return MainAntagonist;
     }
 
-    public void setC(String MA) {
-        MainAntagonist = MA;
+    public void setMainAntagonist(String mainAntagonist) {
+        MainAntagonist = mainAntagonist;
     }
 
-    public int getD() {
+    public int getYearReleased() {
         return YearReleased;
     }
 
-    public void setD(int YR) {
-        YearReleased = YR;
+    public void setYearReleased(int yearReleased) {
+        YearReleased = yearReleased;
     }
 
     public String toString() {
