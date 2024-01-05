@@ -1,6 +1,9 @@
 package com.example.list;
 
-import java.io.Serializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+
+import java.io.*;
 
 public class AnimeTierList implements Serializable {
     private int Rank;
@@ -9,7 +12,9 @@ public class AnimeTierList implements Serializable {
     private String MainAntagonist;
     private int YearReleased;
 
-    public AnimeTierList(int Rank, String Anime, String MainCharacter, String MainAntagonist, int YearReleased) {
+    public Button buttonSave;
+
+    public AnimeTierList(int Rank, String Anime, String MainCharacter, String MainAntagonist, int YearReleased) throws IOException {
         this.Rank = Rank;
         this.Anime = Anime;
         this.MainCharacter = MainCharacter;
@@ -60,6 +65,18 @@ public class AnimeTierList implements Serializable {
 
 
     public String toString() {
-        return Rank + Anime + MainCharacter + MainCharacter + YearReleased;
+        return Rank + Anime + MainCharacter + MainAntagonist + YearReleased;
+    }
+
+    void restoreData() throws Exception {
+        File fileForData = new File("Angelos");
+        FileOutputStream outputStream = new FileOutputStream(fileForData);
+        ObjectOutputStream objOutputStream= new ObjectOutputStream(outputStream);
+        objOutputStream.writeObject(this.Rank);
+        objOutputStream.writeObject(this.Anime);
+        objOutputStream.writeObject(this.MainCharacter);
+        objOutputStream.writeObject(this.MainAntagonist);
+        objOutputStream.writeObject(this.YearReleased);
+        objOutputStream.flush();
     }
 }
