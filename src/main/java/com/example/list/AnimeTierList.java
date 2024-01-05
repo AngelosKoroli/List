@@ -58,6 +58,7 @@ public class AnimeTierList implements Serializable {
         YearReleased = yearReleased;
     }
 
+
     public String toString() {
         return Rank + Anime + MainCharacter + MainCharacter + YearReleased;
     }
