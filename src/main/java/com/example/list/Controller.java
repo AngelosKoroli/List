@@ -4,6 +4,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
+
 public class Controller {
     public TableView AnimeTierlist;
     public TableColumn Rank;
@@ -13,7 +15,7 @@ public class Controller {
     public TableColumn YearReleased;
 
     ///
-    public void initialize() {
+    public void initialize() throws IOException {
 
         Rank.setCellValueFactory(
                 new PropertyValueFactory<>("Rank")
@@ -31,9 +33,9 @@ public class Controller {
                 new PropertyValueFactory<>("YearReleased")
         );
 
-        AnimeTierList Anime1 = new AnimeTierList(1, "Baki", "Baki Hanma", "Yujiro Hanma", 1994);
-        AnimeTierList Anime2 = new AnimeTierList(2, "Dragon Ball Z", "Son Goku", "Frieza", 1989);
-        AnimeTierList Anime3 = new AnimeTierList(3, "JoJo's Bizarre Adventure", "Jotro Kujo", "Dio Brando", 1993);
+        AnimeTierList Anime1 = new AnimeTierList(1, " Baki", " Baki Hanma", " Yujiro Hanma",  1994);
+        AnimeTierList Anime2 = new AnimeTierList(2, " Dragon Ball Z", " Son Goku", " Frieza",  1989);
+        AnimeTierList Anime3 = new AnimeTierList(3, " JoJo's Bizarre Adventure", " Jotaro Kujo", " Dio Brando",  1993);
         System.out.println(Anime1);
         System.out.println(Anime2);
         System.out.println(Anime3);
