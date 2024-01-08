@@ -38,7 +38,7 @@ public class Controller {
         System.out.println(Anime2);
         System.out.println(Anime3);
 
-        // tell the table view about your data
+        // tell the table view about your
         AnimeTierlist.getItems().add(Anime1);
         AnimeTierlist.getItems().add(Anime2);
         AnimeTierlist.getItems().add(Anime3);
