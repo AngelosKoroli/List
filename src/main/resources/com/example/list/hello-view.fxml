@@ -23,7 +23,7 @@
             <TableColumn fx:id="YearReleased" prefWidth="89.0" text="Year" />
         </columns>
       </TableView>
-      <Button fx:id="buttonSave" layoutX="208.0" layoutY="361.0" mnemonicParsing="false" text="Save" />
+      <Button layoutX="208.0" layoutY="361.0" mnemonicParsing="false" onAction="#saveData" text="Save" />
       <Button layoutX="331.0" layoutY="361.0" mnemonicParsing="false" text="Restore" />
    </children>
 </Pane>

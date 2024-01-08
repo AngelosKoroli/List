@@ -4,10 +4,13 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 public class Controller {
-    public TableView AnimeTierlist;
+    public TableView<AnimeTierList> AnimeTierlist;
     public TableColumn Rank;
     public TableColumn Anime;
     public TableColumn MainCharacter;
@@ -47,6 +50,16 @@ public class Controller {
         // teach tablewivew how to find your fields using a factory
     }
 
+    void saveData() throws Exception {
+        File fileForData = new File("Angelos");
+        FileOutputStream outputStream = new FileOutputStream(fileForData);
+        ObjectOutputStream objOutputStream= new ObjectOutputStream(outputStream);
+        objOutputStream.writeObject(AnimeTierlist.getItems().size());
+        for (AnimeTierList eachData : AnimeTierlist.getItems()) {
+            objOutputStream.writeObject(eachData);
+        }
+        objOutputStream.flush();
+    }
 
     //Angelos K was here
 }

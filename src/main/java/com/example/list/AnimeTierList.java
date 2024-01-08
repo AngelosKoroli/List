@@ -68,15 +68,4 @@ public class AnimeTierList implements Serializable {
         return Rank + Anime + MainCharacter + MainAntagonist + YearReleased;
     }
 
-    void saveData() throws Exception {
-        File fileForData = new File("Angelos");
-        FileOutputStream outputStream = new FileOutputStream(fileForData);
-        ObjectOutputStream objOutputStream= new ObjectOutputStream(outputStream);
-        objOutputStream.writeObject(this.Rank);
-        objOutputStream.writeObject(this.Anime);
-        objOutputStream.writeObject(this.MainCharacter);
-        objOutputStream.writeObject(this.MainAntagonist);
-        objOutputStream.writeObject(this.YearReleased);
-        objOutputStream.flush();
-    }
 }
