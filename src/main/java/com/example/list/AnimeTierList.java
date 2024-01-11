@@ -12,7 +12,6 @@ public class AnimeTierList implements Serializable {
     private String MainAntagonist;
     private int YearReleased;
 
-    public Button buttonSave;
 
     public AnimeTierList(int Rank, String Anime, String MainCharacter, String MainAntagonist, int YearReleased) throws IOException {
         this.Rank = Rank;
