@@ -17,6 +17,13 @@ public class Controller {
     public TableColumn MainAntagonist;
     public TableColumn YearReleased;
 
+    public TableView VideoGameTier;
+    public TableColumn Postion;
+    public TableColumn Game;
+    public TableColumn PlayableCharacter;
+    public TableColumn MainVillain;
+    public TableColumn Released;
+
     ///
     public void initialize() throws IOException {
 
