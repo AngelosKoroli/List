@@ -1,11 +1,8 @@
 package com.example.list;
 
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-
 import java.io.*;
 
-public class AnimeTierList implements Serializable {
+public class AnimeTier implements Serializable {
     private int Rank;
     private String Anime;
     private String MainCharacter;
@@ -13,7 +10,7 @@ public class AnimeTierList implements Serializable {
     private int YearReleased;
 
 
-    public AnimeTierList(int Rank, String Anime, String MainCharacter, String MainAntagonist, int YearReleased) throws IOException {
+    public AnimeTier(int Rank, String Anime, String MainCharacter, String MainAntagonist, int YearReleased) throws IOException {
         this.Rank = Rank;
         this.Anime = Anime;
         this.MainCharacter = MainCharacter;
@@ -21,6 +18,7 @@ public class AnimeTierList implements Serializable {
         this.YearReleased = YearReleased;
 
     }
+
 
     public int getRank() {
         return Rank;
