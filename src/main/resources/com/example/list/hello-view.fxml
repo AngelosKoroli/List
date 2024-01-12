@@ -13,7 +13,7 @@
             <Font name="Herculanum" size="28.0" />
          </font>
       </Text>
-      <TableView fx:id="AnimeTierlist" layoutY="43.0" prefHeight="150.0" prefWidth="600.0">
+      <TableView fx:id="AnimeTierlist" layoutY="43.0" prefHeight="357.0" prefWidth="600.0">
         <columns>
           <TableColumn fx:id="Rank" prefWidth="66.0" text="Rank" />
           <TableColumn fx:id="Anime" prefWidth="136.0" text="Anime" />
@@ -22,19 +22,5 @@
             <TableColumn fx:id="YearReleased" prefWidth="89.0" text="Year" />
         </columns>
       </TableView>
-      <TableView fx:id="VideoGameTier" layoutY="243.0" prefHeight="158.0" prefWidth="600.0">
-        <columns>
-            <TableColumn fx:id="Position" prefWidth="62.0" text="Postion" />
-          <TableColumn fx:id="Game" prefWidth="145.0" text="Game" />
-          <TableColumn fx:id="PlayableCharacter" prefWidth="154.0" text="PC" />
-            <TableColumn fx:id="MainVillain" prefWidth="153.0" text="MV" />
-            <TableColumn fx:id="Released" prefWidth="85.0" text="Released" />
-        </columns>
-      </TableView>
-      <Text layoutX="203.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Tier-List" wrappingWidth="215.21630859375">
-         <font>
-            <Font name="Herculanum" size="28.0" />
-         </font>
-      </Text>
    </children>
 </Pane>

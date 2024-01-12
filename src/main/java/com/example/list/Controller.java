@@ -8,16 +8,17 @@ import java.io.*;
 
 public class Controller {
     public TableView<AnimeTier> AnimeTierlist;
-    public TableColumn Rank;
-    public TableColumn Anime;
-    public TableColumn MainCharacter;
-    public TableColumn MainAntagonist;
-    public TableColumn YearReleased;
+    public TableColumn<AnimeTier, Integer> Rank;
+    public TableColumn<AnimeTier, String> Anime;
+    public TableColumn<AnimeTier, String> MainCharacter;
+    public TableColumn<AnimeTier, String> MainAntagonist;
+    public TableColumn<AnimeTier, Integer> YearReleased;
 
 
     ///Jaden rulz
     public void initialize() throws Exception {
 
+        AnimeTierlist.setEditable(true);
 
         Rank.setCellValueFactory(
                 new PropertyValueFactory<>("Rank")
