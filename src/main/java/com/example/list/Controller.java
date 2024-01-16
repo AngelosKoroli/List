@@ -38,23 +38,25 @@ public class Controller {
             cellData.setAnime(event.getNewValue());
         });
 
-        MainCharacter.setCellValueFactory(new PropertyValueFactory<AnimeTier, String>("MC"));
+        MainCharacter.setCellValueFactory(new PropertyValueFactory<AnimeTier, String>("MainCharacter"));
         MainCharacter.setCellFactory(TextFieldTableCell.forTableColumn());
         MainCharacter.setOnEditCommit(event -> {
             AnimeTier cellData = event.getRowValue();
             cellData.setMainCharacter(event.getNewValue());
         });
 
-        MainAntagonist.setCellValueFactory(new PropertyValueFactory<AnimeTier, String>("MA"));
+        MainAntagonist.setCellValueFactory(new PropertyValueFactory<AnimeTier, String>("MainAntagonist"));
         MainAntagonist.setCellFactory(TextFieldTableCell.forTableColumn());
         MainAntagonist.setOnEditCommit(event -> {
-            AnimeTier cellData = event.getRowValue();
-            cellData.setMainAntagonist(event.getNewValue());
-        YearReleased.setCellValueFactory(new PropertyValueFactory<AnimeTier, Integer>("Year"));
+                    AnimeTier cellData = event.getRowValue();
+                    cellData.setMainAntagonist(event.getNewValue());
+                });
+        YearReleased.setCellValueFactory(new PropertyValueFactory<AnimeTier, Integer>("YearReleased"));
         YearReleased.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
-        YearReleased.setOnEditCommit(editEvent -> {
+        YearReleased.setOnEditCommit(event -> {
             AnimeTier cellData = event.getRowValue();
             cellData.setYearReleased(event.getNewValue());
+        });
         if (false) {
             AnimeTier Anime1 = new AnimeTier(1, "Baki", "Baki", "Yujiro", 1994);
             AnimeTier Anime2 = new AnimeTier(2, "Dragon Ball Z", "Goku", "Frieza", 1989);
