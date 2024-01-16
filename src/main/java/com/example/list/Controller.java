@@ -3,6 +3,9 @@ package com.example.list;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.util.converter.BooleanStringConverter;
+import javafx.util.converter.IntegerStringConverter;
 
 import java.io.*;
 
@@ -19,23 +22,39 @@ public class Controller {
     public void initialize() throws Exception {
 
         AnimeTierlist.setEditable(true);
+        Rank.setCellValueFactory(new PropertyValueFactory<AnimeTier, Integer>("Rank"));
+        // Make each cell editable by setting up its CellFactory
+        Rank.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
+        // Set up an onAction method for cell edit commit event
+        Rank.setOnEditCommit(event -> {
+            AnimeTier cellData = event.getRowValue();
+            cellData.setRank(event.getNewValue());
+        });
 
-        Rank.setCellValueFactory(
-                new PropertyValueFactory<>("Rank")
-        );
-        Anime.setCellValueFactory(
-                new PropertyValueFactory<>("Anime")
-        );
-        MainCharacter.setCellValueFactory(
-                new PropertyValueFactory<>("MainCharacter")
-        );
-        MainAntagonist.setCellValueFactory(
-                new PropertyValueFactory<>("MainAntagonist")
-        );
-        YearReleased.setCellValueFactory(
-                new PropertyValueFactory<>("YearReleased")
-        );
+        Anime.setCellValueFactory(new PropertyValueFactory<AnimeTier, String>("Anime"));
+        Anime.setCellFactory(TextFieldTableCell.forTableColumn());
+        Anime.setOnEditCommit(event -> {
+            AnimeTier cellData = event.getRowValue();
+            cellData.setAnime(event.getNewValue());
+        });
 
+        MainCharacter.setCellValueFactory(new PropertyValueFactory<AnimeTier, String>("MC"));
+        MainCharacter.setCellFactory(TextFieldTableCell.forTableColumn());
+        MainCharacter.setOnEditCommit(event -> {
+            AnimeTier cellData = event.getRowValue();
+            cellData.setMainCharacter(event.getNewValue());
+        });
+
+        MainAntagonist.setCellValueFactory(new PropertyValueFactory<AnimeTier, String>("MA"));
+        MainAntagonist.setCellFactory(TextFieldTableCell.forTableColumn());
+        MainAntagonist.setOnEditCommit(event -> {
+            AnimeTier cellData = event.getRowValue();
+            cellData.setMainAntagonist(event.getNewValue());
+        YearReleased.setCellValueFactory(new PropertyValueFactory<AnimeTier, Integer>("Year"));
+        YearReleased.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
+        YearReleased.setOnEditCommit(editEvent -> {
+            AnimeTier cellData = event.getRowValue();
+            cellData.setYearReleased(event.getNewValue());
         if (false) {
             AnimeTier Anime1 = new AnimeTier(1, "Baki", "Baki", "Yujiro", 1994);
             AnimeTier Anime2 = new AnimeTier(2, "Dragon Ball Z", "Goku", "Frieza", 1989);
